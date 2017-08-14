@@ -43,6 +43,14 @@ app.get('/', (req,res) =>{
   });
 });
 
+app.get('/projects', (req,res) =>{
+  res.render('projects.hbs',{
+    pageTitle: 'Project Page',
+    message: 'Project List Page'
+  });
+});
+
+
 app.get('/bad', (req, res) =>{
   res.send({
       errorMessage: 'Server not found',
